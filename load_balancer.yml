@@ -1,0 +1,16 @@
+---
+# tasks file for ld_balancer
+- name: "installation of haproxy"
+  package:
+     name: "haproxy"
+     state: present
+
+- name: "copy configuration file to lb server"
+  template:
+     src: "haproxy.cfg"
+     dest: /etc/haproxy/
+
+- name: "starting haproxy service"
+  service:
+     name: "haproxy"
+     state: "started"

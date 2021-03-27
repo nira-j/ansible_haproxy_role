@@ -1,0 +1,5 @@
+---
+# vars file for ld_balancer
+port: 8080
+webserver1: "192.168.43.57"
+webserver2: "192.168.43.97"

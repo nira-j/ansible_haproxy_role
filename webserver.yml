@@ -1,0 +1,15 @@
+- name: "installation of httpd"
+  package:
+     name: "httpd"
+     state: present
+      
+- name: "copy content to target node"
+  copy:
+     dest: /var/www/html
+     src: /root/webserver_role/index.html
+
+- name: "starting the httpd service"
+  service:
+     name: httpd
+     state: started
+
